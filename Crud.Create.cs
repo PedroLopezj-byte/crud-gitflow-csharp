@@ -4,6 +4,12 @@ static partial class Crud
     {
         Console.Write("Titulo: ");
         var title = Console.ReadLine() ?? "";
+        if (string.IsNullOrWhiteSpace(title))
+        {
+            Console.WriteLine("El titulo es obligatorio.");
+            return;
+        }
+
         Console.Write("Descripcion: ");
         var desc = Console.ReadLine() ?? "";
 
